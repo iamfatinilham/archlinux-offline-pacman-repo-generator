@@ -1,0 +1,3 @@
+#!/bin/bash
+
+expect -c 'spawn su -c "sudo pacman -Syu" non-root-user; expect "Password:"; send "your_password\r"; interact'

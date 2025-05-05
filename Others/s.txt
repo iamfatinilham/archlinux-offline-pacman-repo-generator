@@ -1,0 +1,1 @@
+cp /cnt/repo* /root/ && cp /cnt/yay* /root/ ; bash /root/server* ; zsh /root/repo*

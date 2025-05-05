@@ -1,0 +1,97 @@
+#!/usr/bin/expect -f
+#
+
+set force_conservative 0  ;# set to 1 to force conservative mode even if
+			  ;# script wasn't run conservatively originally
+if {$force_conservative} {
+	set send_slow {1 .1}
+	proc send {ignore arg} {
+		sleep .1
+		exp_send -s -- $arg
+	}
+}
+
+#
+
+
+set timeout -1
+set send_slow {1 .1}
+# spawn pacman -Syyw --cachedir /mnt/custom/$name --dbpath /mnt/tmp/blankdb base base-devel libelf lib32-libelf coreutils pacman pacman-mirrorlist linux linux-headers linux-lts linux-lts-headers linux-hardened linux-hardened-headers linux-hardened-docs linux-firmware util-linux arch-install-scripts archinstall archiso dkms mkinitcpio bash expect zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions gnupg nano vim neovim neovim-qt codeblocks code efibootmgr mtools grub os-prober plymouth systemd sudo cryptsetup lvm2 openssh sshguard vsftpd filezilla font-manager xorg i3 i3-wm i3blocks i3lock i3status dmenu awesome awesome-terminal-fonts hyprland hyprlock hyprpaper ttf-font-awesome ttf-liberation ttf-jetbrains-mono dolphin wofi waybar sway swayidle swaybg swayimg swaylock foot polkit cinnamon wayland gdm gnome gnome-extra gnome-tweaks gnome-terminal gnome-keyring sddm plasma plasma-desktop plasma-meta kde-applications kate xfce4 xfce4-power-manager xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings intel-media-driver mesa networkmanager network-manager-applet netstat-nat wireless_tools wpa_supplicant openvpn nmap sqlmap vulscan hashcat aircrack-ng proxychains-ng metasploit netcat wireshark-cli wireshark-qt termshark dnsmasq kismet dsniff seahorse secrets keepass bitwarden keysmith kwalletmanager lastpass-cli bitwarden-cli qtpass pass gopass vault dialog tmux terminator pipewire pipewire-pulse pipewire-jack ffmpeg mpv git flatpak wine vkd3d wine-mono wine-gecko wine-staging winetricks gum fprintd bluez blueberry blueman bluez-utils cups system-config-printer reflector kmod cargo fakeroot debugedit binutils usbutils pciutils inetutils usbctl timeshift backuppc file-roller zip unzip fuse-zip dosfstools libisoburn cdrtools xorriso wget proxychains-ng intel-ucode amd-ucode nvidia nvidia-utils nvidia-lts libva-mesa-driver ufw lxc p7zip unrar tar rsync exfat-utils fuse-exfat ntfs-3g udisks2 udisks2-btrfs udisks2-lvm2 udisks2-qt5 udiskie flac jasper aria2 docker curl kdenlive krita thunderbird apt dnf htop btop bashtop bpytop powertop screenfetch neofetch jp2a figlet cmatrix blender libreoffice lynx links w3m chromium firefox tor onionshare nginx nginx-mainline nginx-mod-echo nginx-mod-naxsi apache apr apr-util php-apache php-legacy-apache nodejs nodejs-emojione nodejs-lts-hydrogen nodejs-lts-iron nodejs-source-map nodejs-yaml nodejs-nopt python-hatch-nodejs-version valabind caddy babel-cli s3rver vlc gimp obs-studio audacity inkscape podman distrobox virtualbox libvirt virt-manager virt-install virt-viewer qemu qemu-full libguestfs vde2 openbsd-netcat gnu-netcat bridge-utils kitty xterm lxterminal qterminal alacritty ldns ttf-fira-code ttf-fira-mono ttf-firacode-nerd gnu-free-fonts noto-fonts ttf-jetbrains-mono java-runtime jdk-openjdk jre-openjdk jre-openjdk-headless jre-openjdk-headless openjdk-src autoconf make cmake mokutil bc gcc aarch64-linux-gnu-binutils aarch64-linux-gnu-gcc aarch64-linux-gnu-gdb aarch64-linux-gnu-glibc aarch64-linux-gnu-linux-api-headers musl blaze php mysql sqlite python python3 python-adblock python-pip
+spawn pacman -Syyw --cachedir /mnt/custom/$name --dbpath /mnt/tmp/blankdb $(cat $location/apps.txt)
+match_max 100000
+expect -exact "Enter a selection (default=all): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a selection (default=all): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a selection (default=all): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a selection (default=all): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a selection (default=all): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a selection (default=all): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a selection (default=all): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a selection (default=all): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "3\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -exact "Enter a number (default=1): \[?25h"
+sleep .1
+send -s -- "\r"
+expect -re "(.*Proceed with download.*)"
+sleep .1
+send -s -- "y\r"
+expect eof
